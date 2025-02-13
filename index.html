@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi amor</title>
+    <style>
+ 
+ 
+
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Para que el fondo cubra toda la pantalla */
+            background-color: #ffdfd4; /* Color cálido */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            overflow: auto; /* Permite deslizar */
+            user-select: none; /* Evita selección de texto */
+        
+        }
+        .carta {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            position: relative;
+            pointer-events: none; /* Evita clics y ediciones */
+        }
+        .imagen {
+            width: 100%;
+            max-width: 400px;
+            animation: mover 2s infinite alternate;
+        }
+        @keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(10px);
+            }
+        }
+        .corazon {
+    position: fixed; /* Se mantiene fijo en la pantalla */
+    left: calc(10% + 80% * random()); /* Ubicación aleatoria */
+    bottom: -10px; /* Inicia desde abajo de la pantalla */
+    color: red;
+    font-size: 20px;
+    animation: flotar 4s linear infinite;
+    opacity: 0.8;
+}
+@keyframes flotar {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+        
+    </style>
+</head>
+<body>
+    <div class="carta">
+        <img src="roib.jpg" alt="Imagen decorativa" class="imagen"> <!-- Cambiar imagen -->
+        <p>Para <strong>[Gilaris Andreina]</strong>,</p>
+        <p>Bueno, amor, no soy mucho de hacer esto ni sé cómo empezar xD, pero ya que hoy es un gran día para demostrar amor y lo que quiero darte no puedo en este momento por ciertas circunstancias, se me ocurrió darte algo de mí que me gusta, como esto. Jaja, espero que todo me funcione como quiero xD.
+
+            Bueno, en corto, amor, lo que quiero hoy es expresarte en palabras lo que siento en lo más profundo de mi corazón. Desde el momento en que entraste a mi vida, todo cambió para mejor. Siendo sincero, en ese momento no estaba buscando nada, solo seguía con mi vida hacia adelante, en un plan neutro, pero de cierta manera sentía que faltaba algo. Suena muy cliché, pero ajá, era algo así. No sabría cómo interpretarlo, pero sí tenía algo claro: necesitaba hablar contigo.
+            
+            Siempre quise arreglar los inconvenientes que tuvimos en el pasado, y bueno, un día lo logré. Pensé que iba a pasar más tiempo sin hablar y solucionar eso, pero no fue el caso, y me alegra saber que no lo fue. Pudimos arreglar las cosas, sobre todo yo, y para mi gran sorpresa, tú también querías hablar. Los días después de que solucionamos todo fueron aún mejores, me alegraba mucho más verte y compartir contigo.
+            
+            Pero me di cuenta de algo: estábamos haciendo un poco lo de antes, y bueno, lo hablamos... y para mi sorpresa, nos hicimos pareja. Jaja xD ¿Quién diría que al final terminaríamos juntos después de todo lo que pasamos Pero me alegro muchísimo. Siendo sincero, te agradezco por haberme dado esta nueva oportunidad para estar contigo. No sabes lo afortunado que me has hecho en nuestra relación. Te amo un montón. Me encanta estar contigo, verte a cada rato, verte alegre, sonreír jaja. Me encanta cuando te pones malcriada, jaja,  ¡te ves súper tierna!
+            
+            En este tiempo que hemos pasado juntos, ha sido muy divertido y feliz. A veces tenemos nuestras diferencias y discusiones, pero sabemos hablar y comunicarnos, y eso es un gran alivio para mí. Me encanta saber que si tenemos un problema, lo arreglamos con palabras. Gracias por eso también, amor.
+            
+            Gracias por todos los momentos que hemos compartido, y espero seguir pasando más tiempo contigo, haciéndote feliz como tú me haces feliz a mí. Espero que sigamos adelante, que podamos hacer todo lo que queremos y nos proponemos.
+            
+            Creo que he escrito demasiados "gracias" jaja, pero ajá, en serio, esta oportunidad es invaluable. Bueno, amor, no sé qué más escribir. Supuestamente era una carta, pero ahora parece un testamento ajajaja xD.
+            
+            Esperemos que el universo conspire a nuestro favor siempre y más adelante.
+            
+            💗 Te amo, Gilaris Andreina. 💗</p>
+        <p>Atentamente,<br><strong>Roiber Vasquez:3</strong></p>
+    </div>
+    
+    <script>
+        function crearCorazon() {
+            const corazon = document.createElement('div');
+            corazon.classList.add('corazon');
+            corazon.innerHTML = '❤️';
+            corazon.style.left = Math.random() * 100 + 'vw';
+            corazon.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(corazon);
+            setTimeout(() => corazon.remove(), 4000);
+        }
+        setInterval(crearCorazon, 500);
+    </script>
+</body>
+</html>
